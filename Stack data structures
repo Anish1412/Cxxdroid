@@ -1,0 +1,68 @@
+//*********** Stack Concept ************
+
+#include<iostream>
+
+using namespace std;
+int force(int m,int a){
+	/* STEP 3:
+	i)Now the Force method gets executed
+	*/
+	//STEP 4:
+	//After execution, the method gets deleted
+	int f = m*a;
+	return f;
+}
+int momentum(int m1,int v1){
+	/* STEP 2 :
+		.i)Now the momentum method gets executed and 
+		 ii) also the force method gets executed 
+	iii) then force tells momentum method to pause 	
+	iv) let it execute first and then resume yourself to execute
+	v) the momentum method pauses and force method goes to execute  */
+	
+	/* STEP 5:
+	i) After the force method gets executed and deleted
+	ii) The momentum method also resume, get executed and gets deleted
+	*/
+	
+	cout<<"Force : "<<force(45,78);
+	int p1 = m1*v1;
+	return p1;
+}
+int main(){
+	/*STEP 1 :
+	i)Here the main method gets executed and 
+	ii) also the momentum method gets executed    
+	iii) then momentum tells main method to pause 
+	iv) let it execute first and then resume yourself to execute
+	v) the main method pauses and momentum method goes to execute */
+	
+	/* STEP 6:
+	i) After the momentum method gets executed and deleted
+	ii) The main method also resume, get executed and gets deleted
+	*/
+	cout<<"Momentum : "<<momentum(34,12);
+	return 0;
+}
+
+
+/* 
+//------------FOR BETTER UNDERSTANDING--------
+
+#include<iostream>
+
+using namespace std;
+int force(int m,int a){
+    int f = m*a;
+	return f;
+}
+int momentum(int m1,int v1){
+	cout<<"Force : "<<force(45,78);
+	int p1 = m1*v1;
+	return p1;
+}
+int main(){
+	cout<<"Momentum : "<<momentum(34,12);
+	return 0;
+}
+*/
