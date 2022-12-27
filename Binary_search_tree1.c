@@ -13,7 +13,6 @@ struct Node * createNode(int data){
     n->data = data;
     n->left = NULL;
     n->right = NULL;
-    return n;
 }
 
 struct Node * search(struct Node * root,int key){
@@ -43,12 +42,15 @@ int main(){
     p1->left = p3;
     p1->right = p4;
 
-    struct Node * n = search(p,2);
+    int num;
+    printf("Enter number to search in binary search tree : \n");
+    scanf("%d",&num);
+    struct Node * n = search(p,num);
     if(n != NULL){
-        printf("Found : %d",n->data);
+        printf("%d is present in the Binary search tree",n->data);
     }
     else {
-        printf("Not Found!!");
+        printf("It is not present in the Binary search tree");
     }
     return 0;
 }
