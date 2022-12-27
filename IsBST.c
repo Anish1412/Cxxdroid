@@ -70,6 +70,11 @@ int main(){
     p1->right = p4;
 
     inOrder(p);
-    printf("\nSorted Array : %d",isBST(p));
+    if(isBST(p)){
+        printf("\nIt is an Binary Search tree!!");
+    }
+    else {
+        printf("\nIt is not an Binary Search tree!!");
+    }
     return 0;
 }
